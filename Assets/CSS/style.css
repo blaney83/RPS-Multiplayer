@@ -1,0 +1,102 @@
+body {
+    align-content: center;
+    max-width: auto;
+    margin: auto;
+    background-image: url("../Images/background.jpg")
+}
+
+.signInPage{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: coral;
+    z-index: 4; 
+    opacity: 1;
+}
+
+form {
+    margin-top: 45%;
+}
+
+h1 {
+    font-weight: bolder;
+    color: rgb(107, 107, 107);
+    border-radius: 10px;
+    margin: 0px;
+    background-color: rgb(209, 209, 209);
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 10px;
+    border-color: darkgrey;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+h4 {
+    background-color: slategray;
+    color: lightgray;
+    margin: 0px;
+    padding: 20px auto;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 10px;
+    border-color: darkgrey;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+.con1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: 100%;
+    background-color: rgba(40, 255, 172, 0.959);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 1rem;
+}
+.con2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+btn {
+    font-size: 20px;
+    padding: .5rem;
+    margin-top: 2rem;
+    color: white;
+    background-color: black;
+    border-style: solid;
+    border-color: lightgrey;
+    border-radius: 5px;
+}
+p {
+    font-size: 20px;
+    margin: 3px;
+}
+.table{
+    border-radius: 2rem;
+}
+.table tr:first-child th {
+    border-top: 0;
+}
+th {
+    color: white;
+}
+tr {
+    color: white;
+}
+lower {
+    padding-top: 0%;
+}
+#winner {
+    font-weight: bolder;
+    color: darkgreen;
+    font-style: italic;
+    font-variant-caps: normal;
+    font-size: 30px; 
+}
+
+.cardBody{
+    
+    background-color: greenyellow;
+}
