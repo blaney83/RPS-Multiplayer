@@ -5,6 +5,7 @@ body {
     background-image: url("../Images/background.jpg")
 }
 
+
 .signInPage{
     position: fixed;
     top: 0px;
@@ -99,4 +100,29 @@ lower {
 .cardBody{
     
     background-color: greenyellow;
+}
+
+#chatTarget{
+    color: white;
+    background-color: black;
+    border: grey;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: .5rem;
+    height: 10rem;
+    overflow-y: scroll;
+}
+
+#message-field{
+    width: 70%;
+
+}
+
+#message-send-button{
+    width: 20%;
+
+}
+
+.mess-div{
+    padding: .5rem;
 }

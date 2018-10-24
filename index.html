@@ -12,179 +12,166 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Leaderboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <div class="container dropdown-item">
+                            <div class="row">
+                                <div class="col-12">
+                                    <table class="table table-dark table-responsive-md">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">TOP PLAYERS</th>
+                                                <th scope="col">WINS</th>
+                                                <th scope="col">LOSSES</th>
+                                                <th scope="col">TIES</th>
+                                                <th scope="col">WIN %</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">PLAYER 1</th>
+                                                <td><span id="playerScore"></span></td>
+                                                <td><span id="playerLosses"></span></td>
+                                                <td><span id="ties"></span></td>
+                                                <td><span id="winPerc"></span>%</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">PLAYER 2</th>
+                                                <td><span id="compScore"></span></td>
+                                                <td><span id="compLosses"></span></td>
+                                                <td><span id="tiesC"></span></td>
+                                                <td><span id="lossPerc"></span>%</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">PLAYER 3</th>
+                                                <td><span id="rockWins"></span></td>
+                                                <td><span id="rockLosses"></span></td>
+                                                <td><span id="rockTies"></span></td>
+                                                <td><span id="rockPerc"></span>%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
 
-    <body>
-        <div class="signInPage">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-6">
-                        <h1>Sign Up</h1>
-                        <form action="" id="signUp">
-                            <input type="text" value="Enter a Username" id="userNameEntry">
-                            <input type="text" value="Enter an Email" id="emailEntry">
-                            <input type="text" value="Enter a Password" id="passwordEntry">
-                            <input type="submit" value="START">
-                        </form>
-                        <h1>Sign In</h1>
-                        <form action="" id="signIn">
-                            <input type="text" value="Enter an Email" id="emailLogin">
-                            <input type="text" value="Enter a Password" id="passwordLogin">
-                            <input type="submit" value="Sign-in">
-                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="signInPage">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <h1>Sign Up</h1>
+                    <form action="" id="signUp">
+                        <input type="text" value="Enter a Username" id="userNameEntry">
+                        <input type="text" value="Enter an Email" id="emailEntry">
+                        <input type="text" value="Enter a Password" id="passwordEntry">
+                        <input type="submit" value="START">
+                    </form>
+                    <h1>Sign In</h1>
+                    <form action="" id="signIn">
+                        <input type="text" value="Enter an Email" id="emailLogin">
+                        <input type="text" value="Enter a Password" id="passwordLogin">
+                        <input type="submit" value="Sign-in">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container con1">
+        <div class="row">
+            <div class="col text-center">
+                <h1>WELCOME TO ROCK, PAPER, SCISSORS!</h1>
+                <h4>Play your friends!</h4>
+                <div class="container con2">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-4">
+                            <btn class="firstMove" id="rock">rock</btn>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-4">
+                            <btn class="firstMove" id="paper">paper</btn>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-4">
+                            <btn class="firstMove" id="scissors">scissors</btn>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container con1">
+        <div class="row">
+            <div class="col-12">
+                <p>Winner is ... <span id="winner"></span></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-6">
+                <p id="player1">Player 1</p>
+                <p>Move= <span id="playerGuess">0</span></p>
+            </div>
+            <div class="col-md-12 col-6">
+                <p id="player2">Player 2</p>
+                <p>Move= <span id="computerGuess">0</span></p>
+            </div>
+        </div>
+        <div class="container">
             <div class="row">
-                <div class="col text-center">
-                    <h1>WELCOME TO ROCK, PAPER, SCISSORS!</h1>
-                    <h4>What's your high win streak?</h4>
-                    <div class="container con2">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6 col-4">
-                                <btn class="firstMove" id="rock">rock</btn>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-4">
-                                <btn class="firstMove" id="paper">paper</btn>
-                            </div>
-                            <div class="col-sm-12 col-md-12 col-4">
-                                <btn class="firstMove" id="scissors">scissors</btn>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-12" id="htmlGameArea">
+                    <h2>Available games</h2>
+                    <p id="availableGames"></p>
+                    <h2>My Game</h2>
+                    <p id="myGame"></p>
+                    <button id="createGame">Create Game</button>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <p>Winner is ... <span id="winner"></span></p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 col-6">
-                    <p id="player1">Player 1</p>
-                    <p>Move= <span id="playerGuess">0</span></p>
-                </div>
-                <div class="col-md-12 col-6">
-                    <p id="player2">Player 2</p>
-                    <p>Move= <span id="computerGuess">0</span></p>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>Available games</h2>
-                        <p id="availableGames"></p>
-                        <h2>My Game</h2>
-                        <p id="myGame"></p>
-                        <button id="createGame">Create Game</button>
-                    </div>
-                </div>
-            </div>
+        </div>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <table class="table table-dark table-responsive-md">
-                            <thead>
-                                <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">WINS</th>
-                                    <th scope="col">LOSSES</th>
-                                    <th scope="col">TIES</th>
-                                    <th scope="col">WIN %</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">PLAYER 1</th>
-                                    <td><span id="playerScore"></span></td>
-                                    <td><span id="playerLosses"></span></td>
-                                    <td><span id="ties"></span></td>
-                                    <td><span id="winPerc"></span>%</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">PLAYER 2</th>
-                                    <td><span id="compScore"></span></td>
-                                    <td><span id="compLosses"></span></td>
-                                    <td><span id="tiesC"></span></td>
-                                    <td><span id="lossPerc"></span>%</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">ROCK</th>
-                                    <td><span id="rockWins"></span></td>
-                                    <td><span id="rockLosses"></span></td>
-                                    <td><span id="rockTies"></span></td>
-                                    <td><span id="rockPerc"></span>%</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">PAPER</th>
-                                    <td><span id="paperWins"></span></td>
-                                    <td><span id="paperLosses"></span></td>
-                                    <td><span id="paperTies"></span></td>
-                                    <td><span id="paperPerc"></span>%</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">SCISSORS</th>
-                                    <td><span id="scissorWins"></span></td>
-                                    <td><span id="scissorLosses"></span></td>
-                                    <td><span id="scissorTies"></span></td>
-                                    <td><span id="scisPerc"></span>%</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+        <div class="container lower">
+            <div class="row">
+                <div class="col-4">
+                    <p>Wins: <span id="winsTarget">0</span></p>
+                </div>
+                <div class="col-4">
+                    <p>Losses: <span id="lossesTarget">0</span></p>
+                </div>
+                <div class="col-4">
+                    <p>Ties: <span id="tiesTarget">0</span></p>
                 </div>
             </div>
-            <div class="container lower">
-                <div class="row">
-                    <div class="col-4">
-                        <p>Total Games: <span id="totalGames">0</span></p>
-                    </div>
-                    <div class="col-4">
-                        <p>Win Streak: <span id="winStreak">0</span></p>
-                    </div>
-                    <div class="col-4">
-                        <p>High Streak: <span id="highStreak">0</span></p>
-                    </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12" id="chatTarget">
                 </div>
             </div>
-            <p>
-                <!-- messaging collapsable window -->
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
-                    aria-expanded="false" aria-controls="collapseExample">
-                    Button with data-target
-                </button>
-            </p>
-            <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-3" id="chatTarget">
-                                <h4>Username</h4>
-                            </div>
-                            <div class="col-9" id="chatMessage">
-                                <h4>Message</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <input type="text" id="message-field">
-                            <input type="submit" value="Send" id="message-send-button">
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-12 mess-div">
+                    <input type="text" id="message-field">
+                    <input type="submit" value="Send" id="message-send-button">
                 </div>
             </div>
+        </div>
 
-            <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-                crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-                crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-                crossorigin="anonymous"></script>
-            <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
-            <script src="Assets/javaScript/game.js"></script>
-    </body>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+        <script src="Assets/javaScript/game.js"></script>
+</body>
 
 </html>
